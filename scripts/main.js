@@ -129,7 +129,7 @@ window.onload = setInterval(() => {
 	ctx.drawImage(secondHand.image, secondHand.x, secondHand.y, secondHand.height * secondHand.image.width / secondHand.image.height, secondHand.height);
 	*/
 
-	hhR += 6 / (FPS * 60 * 60); // Gradually increment hand
+	hhR += 30 / (FPS * 60 * 60); // Gradually increment hand
 	hourHand.rotate(hhR);
 
 	mmR += 6 / (FPS * 60); // Gradually increment hand
