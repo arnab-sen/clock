@@ -99,7 +99,7 @@ secondHand.scaleImage(0.70);
 secondHand.setPosition(772, 410);
 
 var time, hh, mm, ss;
-var angleOffset = -82; // Pocketwatch in image is tilted anti-clockwise
+var angleOffset = -84; // Pocketwatch in image is tilted anti-clockwise
 var hhR, mmR, ssR;
 time = new Date();
 hh = time.getHours() % 12; // 12-hour time instead of 24-hour time
@@ -118,8 +118,8 @@ window.onload = setInterval(() => {
 	mm = time.getMinutes();
 	ss = time.getSeconds();
 
-	hhR = angleOffset + hh * 30;
-	mmR = angleOffset + mm * 6;
+	hhR = angleOffset + hh * 30 + (mm / 60) * 30;
+	mmR = angleOffset + mm * 6 + (ss / 60) * 6;
 	ssR = angleOffset + ss * 6;
 
 	hourHand.rotate(hhR);
